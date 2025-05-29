@@ -15,7 +15,7 @@ export interface Member {
   description: string;
   socialLinks?: {
     github?: string;
-    linkedin?: string;
-    email?: string;
+    website?: string;
+    instagram?: string;
   };
 }

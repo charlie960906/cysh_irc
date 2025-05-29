@@ -24,22 +24,22 @@ const FeaturesSection: React.FC = () => {
     {
       icon: <Code size={24} />,
       title: "技術培訓 / Technical Training",
-      description: "通過研討會、工作坊和專案，發展和增強會員的技術能力。",
+      description: "通過讀書會、營隊和專案，發展和增強社員的資訊能力。",
     },
     {
       icon: <Users size={24} />,
       title: "社群交流 / Community",
-      description: "建立一個支持性的社群，促進會員之間的知識分享和合作。",
+      description: "建立一個資訊交流的社群，促進社員之間的分享和合作。",
     },
     {
       icon: <Lightbulb size={24} />,
-      title: "創新項目 / Innovation",
-      description: "鼓勵和支持創新思維，開發解決現實問題的項目。",
+      title: "創新合作 / Innovation",
+      description: "鼓勵和支持創新思維，開發軟體探索新技術。",
     },
     {
       icon: <Trophy size={24} />,
       title: "比賽與挑戰 / Competitions",
-      description: "參與各種技術競賽，培養問題解決能力和團隊合作精神。",
+      description: "舉辦或參與各種競賽，培養問題解決能力和團隊合作精神。",
     },
   ];
 
@@ -51,7 +51,7 @@ const FeaturesSection: React.FC = () => {
             我們的特色 / Our Features
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            資訊研究社致力於提供全面的技術教育和實踐機會，打造未來科技人才
+            嘉義高中資訊研究社在提供資訊資源和資訊教育付出一份心力
           </p>
         </div>
         

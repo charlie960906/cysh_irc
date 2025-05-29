@@ -3,74 +3,74 @@ import { Member } from '../types';
 export const members: Member[] = [
   {
     id: '1',
-    name: '張志明 / Eric Chang',
-    role: '社長 / President',
-    image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg',
-    description: '資訊工程系大三學生，專精於網頁開發和人工智能應用。負責社團整體規劃和管理。',
+    name: '許安祐 / Sharkyy',
+    role: '社長 / 美宣',
+    image: '',
+    description: '哈囉哈囉，學弟妹們！我是今年的資研社社長。雖然我看起來高大威猛(?，但其實我超級友善，絕對不會咬人，歡迎大家隨時來找我聊聊！如果你有特別想了解的事情或問題，儘管來問，我手上有滿滿的資源，只要你開口，我一定毫不保留地分享給你。今年對我們資研社來說特別重要，因為我們有許多全新的企劃正在展開。快來加入資研社，讓我們一起探索資訊世界的奧妙吧！',
     socialLinks: {
-      github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      email: 'president@infoclub.com'
+      github: 'https://github.com/larryeng',
+      website: 'https://larryeng.github.io/',
+      instagram: ''
     }
   },
   {
     id: '2',
-    name: '林美玲 / Melissa Lin',
-    role: '副社長 / Vice President',
-    image: 'https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg',
-    description: '電機工程系大三學生，擅長數據分析與演算法。負責協助社長和管理社團活動。',
+    name: '黃宥鈞 / 老黃大大',
+    role: '副社長 / 公關',
+    image: '',
+    description: '電嗨各位學弟學妹 我是C++派ㄉ 所以對C++有興趣的可以來找我就跟上面所說的一樣，我也是資研社的公關，是一個絕對的E人但是在事情爆多的時候可能會變成i人，不想跟人講話瘋狂的趕進度。然後對F1有興趣的歡迎來找我開槓，我可以跟你聊三天三夜超過。對然後就是加入資研社就對了，想要了解最新科技就來這裡準沒錯。等你們加入一起coding吧。學弟學妹加資研!!!',
     socialLinks: {
-      github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      email: 'vp@infoclub.com'
+      github: 'https://github.com/charlie960906',
+      website: 'https://ceoblog.hyjdevelop.com',
+      instagram: 'https://ceoig.hyjdevelop.com'
     }
   },
   {
     id: '3',
-    name: '王建宏 / Jason Wang',
-    role: '技術長 / Technical Director',
-    image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg',
-    description: '資訊工程系大四學生，全端開發專家。負責社團技術活動規劃和執行。',
+    name: '李益安 / ',
+    role: '教學 / 網管',
+    image: '',
+    description: '',
     socialLinks: {
       github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      email: 'tech@infoclub.com'
+      website: 'https://linkedin.com',
+      instagram: 'tech@infoclub.com'
     }
   },
   {
     id: '4',
-    name: '陳雅婷 / Tina Chen',
-    role: '活動總監 / Event Director',
-    image: 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg',
-    description: '企業管理系大二學生，擅長專案管理和團隊協調。負責社團活動策劃和執行。',
+    name: '葉明軒 / ',
+    role: '文書',
+    image: '',
+    description: '',
     socialLinks: {
       github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      email: 'events@infoclub.com'
+      website: 'https://linkedin.com',
+      instagram: 'events@infoclub.com'
     }
   },
   {
     id: '5',
-    name: '李俊賢 / Leo Li',
-    role: '財務長 / Finance Director',
-    image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg',
-    description: '會計系大三學生，專精於財務規劃和預算管理。負責社團經費管理和決算。',
+    name: '吳嘉晉 / ',
+    role: '公關',
+    image: '',
+    description: '',
     socialLinks: {
       github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      email: 'finance@infoclub.com'
+      website: 'https://linkedin.com',
+      instagram: 'finance@infoclub.com'
     }
   },
   {
     id: '6',
-    name: '黃佳穎 / Kathy Huang',
-    role: '公關總監 / PR Director',
-    image: 'https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg',
-    description: '傳播媒體系大二學生，擅長社群媒體管理和內容創作。負責社團對外宣傳和媒體關係。',
+    name: '王韋智 / ',
+    role: '總務',
+    image: '',
+    description: '',
     socialLinks: {
       github: 'https://github.com',
-      linkedin: 'https://linkedin.com',
-      email: 'pr@infoclub.com'
+      website: 'https://linkedin.com',
+     instagram: 'pr@infoclub.com'
     }
   }
 ];

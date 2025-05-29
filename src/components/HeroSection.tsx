@@ -26,9 +26,9 @@ const HeroSection: React.FC = () => {
       
       <div className="container mx-auto px-4 z-10 text-center">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in">
-          資訊研究社
+          嘉義高中資訊研究社
           <span className="block mt-2 text-3xl md:text-4xl lg:text-5xl text-blue-300">
-            Information Research Club
+            CYSH_IRC
           </span>
         </h1>
         

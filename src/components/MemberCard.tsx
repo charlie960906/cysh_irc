@@ -1,6 +1,6 @@
 import React from 'react';
 import { Member } from '../types';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Globe, Instagram } from 'lucide-react';
 
 interface MemberCardProps {
   member: Member;
@@ -34,24 +34,26 @@ const MemberCard: React.FC<MemberCardProps> = ({ member }) => {
                 <Github size={20} />
               </a>
             )}
-            {member.socialLinks.linkedin && (
+            {member.socialLinks.website && (
               <a 
-                href={member.socialLinks.linkedin} 
+                href={member.socialLinks.website} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-blue-600 transition-colors"
-                aria-label="LinkedIn"
+                aria-label="Website"
               >
-                <Linkedin size={20} />
+                <Globe size={20} />
               </a>
             )}
-            {member.socialLinks.email && (
+            {member.socialLinks.instagram && (
               <a 
-                href={`mailto:${member.socialLinks.email}`} 
+                href={member.socialLinks.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="text-gray-500 hover:text-blue-600 transition-colors"
-                aria-label="Email"
+                aria-label="Instagram"
               >
-                <Mail size={20} />
+                <Instagram size={20} />
               </a>
             )}
           </div>
@@ -61,4 +63,4 @@ const MemberCard: React.FC<MemberCardProps> = ({ member }) => {
   );
 };
 
-export default MemberCard;
+export default MemberCard

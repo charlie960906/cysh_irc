@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { activities } from '../data/activities';
 import { Calendar, ArrowRight } from 'lucide-react';
-
+import { Activity } from '../types';
 const ActivityCard: React.FC<{ activity: Activity }> = ({ activity }) => {
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
