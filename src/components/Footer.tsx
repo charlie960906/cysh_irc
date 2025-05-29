@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Github, Mail, MapPin, Phone, Code } from 'lucide-react';
+import { Facebook, Instagram, Github, Mail, MapPin, Code, Wrench} from 'lucide-react';
+
 
 const Footer: React.FC = () => {
   return (
@@ -60,16 +61,18 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="text-blue-400 flex-shrink-0 mt-1" />
-                <span className="text-gray-300">台北市大安區復興南路一段000號, 10617</span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Phone size={20} className="text-blue-400 flex-shrink-0" />
-                <span className="text-gray-300">(02) 1234-5678</span>
+                <span className="text-gray-300">嘉義市大雅路</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="text-blue-400 flex-shrink-0" />
-                <a href="mailto:info@infoclub.com" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  info@infoclub.com
+                <a href="mailto:cyshirc@gamil.com" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  cyshirc@gmail.com
+                </a>
+              </li>
+                <li className="flex items-center space-x-3">  
+                 <Wrench size={20} className="text-blue-400 flex-shrink-0" /> 
+                <a href="https://hyjdevelop.com" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  維護團隊：HYJdevelop
                 </a>
               </li>
             </ul>
@@ -77,7 +80,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} 資訊研究社 / Information Research Club. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} 嘉義高中資訊研究社 / Powered by <a href="https://hyjdevelop.com" target="_blank" rel="noopener noreferrer">HYJdevelop</a></p>
         </div>
       </div>
     </footer>

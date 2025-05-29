@@ -58,11 +58,11 @@ const HeroSection: React.FC = () => {
       </div>
       
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+      <div className="absolute bottom-10 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-scroll"></div>
         </div>
-        <span className="text-white text-sm mt-2">滾動查看更多 / Scroll to explore</span>
+        <span className="text-white text-sm mt-2 text-center">滾動查看更多 / Scroll to explore</span>
       </div>
     </div>
   );
