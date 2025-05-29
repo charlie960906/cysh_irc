@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Github, Mail, MapPin, Code, Wrench} from 'lucide-react';
+import { Terminal, Instagram, Github, Mail, MapPin, Code, Wrench} from 'lucide-react';
 
 
 const Footer: React.FC = () => {
@@ -15,20 +15,17 @@ const Footer: React.FC = () => {
               <h3 className="text-xl font-bold">資訊研究社</h3>
             </div>
             <p className="text-gray-300 mb-4">
-              專注於計算機科學和資訊技術研究的學生社團，培養學生的技術能力和創新思維。
+              專注於資訊科技的學生社團，培養學生的資訊能力和探討新科技。
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
-                <Facebook size={20} />
+              <a href="https://cc.cysh.cy.edu.tw/home" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Terminal size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https://www.instagram.com/cysh_irc/?hl=zh-tw" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https://github.com/113cyshirc" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Github size={20} />
-              </a>
-              <a href="mailto:info@infoclub.com" className="text-gray-300 hover:text-blue-400 transition-colors">
-                <Mail size={20} />
               </a>
             </div>
           </div>

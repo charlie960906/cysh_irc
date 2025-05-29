@@ -28,11 +28,16 @@ const Leadership: React.FC = () => {
               <h2 className="text-2xl font-bold mb-2">
                 關於我們的團隊 / About Our Team
               </h2>
-              <p className="text-gray-600">
-                資訊研究社的幹部團隊由一群熱情且有才華的學生組成，我們擁有不同的專業技能和背景。
-                我們努力創建一個具有友善、包容、互助的環境，讓所有社員都能發展自己的興趣和愛好。
-                透過個社員的努力和奉獻，才能夠組織高質量的活動，促進資訊資源分享，並建立緊密的社群關係。
-              </p>
+              <p className="text-gray-600">我們是一群對資訊很有興趣的高中生</p>
+               <p className="text-gray-600">我們分享所學的新知，例如:</p>
+                <p className="text-red-600">Traceback (most recent call last):</p>
+                 <p className="text-red-600">  File ＜stdin＞, line 1, in ＜module＞</p>
+                  <p className="text-red-600">TypeError: can only concatenate str (not "knowledge") to str</p>
+                   <p className="text-gray-600">啊! 出錯了...</p>
+                    <p className="text-gray-600">不過沒關係，因為</p>
+                     <p className="text-gray-600">就在今年，2025年，我們有許多全新的企劃正在展開。</p>
+                        <p className="text-gray-600">快來加入資研社，讓我們一起探索資訊世界的奧妙吧!</p>
+                           <p className="text-gray-600">往下滑看看以前的電神吧!!!</p>
             </div>
           </div>
         </div>

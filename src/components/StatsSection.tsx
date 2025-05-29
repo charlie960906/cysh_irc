@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Calendar, Award, BookOpen } from 'lucide-react';
+import { Users, Calendar, Handshake, BookOpen } from 'lucide-react';
 
 interface StatItemProps {
   icon: React.ReactNode;
@@ -27,22 +27,22 @@ const StatsSection: React.FC = () => {
           <StatItem 
             icon={<Users size={32} />} 
             value="100+" 
-            label="活躍會員 / Active Members" 
+            label="歷屆社員 / Club Members" 
           />
           <StatItem 
             icon={<Calendar size={32} />} 
-            value="20+" 
+            value="10+" 
             label="年度活動 / Annual Events" 
           />
           <StatItem 
-            icon={<Award size={32} />} 
+            icon={<Handshake size={32} />} 
             value="15+" 
-            label="獲獎項目 / Awards" 
+            label=" 合作友社 / Partner Club" 
           />
           <StatItem 
             icon={<BookOpen size={32} />} 
-            value="8+" 
-            label="年度歷史 / Years of History" 
+            value="10y+" 
+            label="創辦至今 / Since Founding" 
           />
         </div>
       </div>
