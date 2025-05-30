@@ -13,6 +13,7 @@ export interface Member {
   role: string;
   image: string;
   description: string;
+  batch: string;
   socialLinks?: {
     github?: string;
     website?: string;
