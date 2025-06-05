@@ -7,6 +7,7 @@ const ActivityDetail: React.FC = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const activity = activities.find(a => a.id === id);
+  const currentDate = new Date('2025-06-05'); // 當前日期
 
   if (!activity) {
     return (
@@ -66,6 +67,9 @@ const ActivityDetail: React.FC = () => {
     }
   };
 
+  // 檢查活動是否已結束
+  const isEventEnded = new Date(activity.date) < currentDate;
+
   return (
     <div className="pt-20 min-h-screen bg-gray-50">
       <div className="relative h-96">
@@ -101,55 +105,80 @@ const ActivityDetail: React.FC = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-md p-8">
-            <h2 className="text-2xl font-bold mb-6">活動詳情 / Event Details</h2>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
+              <h2 className="text-2xl font-bold">活動詳情 / Event Details</h2>
+              <div className="flex flex-col sm:flex-row gap-4">
+                {activity.registrationLink && !isEventEnded ? (
+                  <a
+                    href={activity.registrationLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    立即報名 / Register Now
+                  </a>
+                ) : isEventEnded ? (
+                  <span className="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-600 rounded-lg">
+                    活動已結束 / Event Ended
+                  </span>
+                ) : null}
+                {activity.websiteLink && (
+                  <a
+                    href={activity.websiteLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                  >
+                    活動官網 / Event Website
+                  </a>
+                )}
+              </div>
+            </div>
             <div className="prose max-w-none">
               <p className="text-gray-600 mb-6">{activity.description}</p>
-              
-              <h3 className="text-xl font-bold mb-4">活動特色 / Features</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600 mb-6">
-                <li>專業講師指導 / Professional instruction</li>
-                <li>實作練習機會 / Hands-on practice opportunities</li>
-                <li>小組討論交流 / Group discussions</li>
-                <li>專案實務經驗 / Practical project experience</li>
-              </ul>
 
-              <h3 className="text-xl font-bold mb-4">活動流程 / Schedule</h3>
-              <div className="space-y-4 text-gray-600 mb-6">
-                <div className="flex items-start">
-                  <div className="font-medium w-32">09:00 - 09:30</div>
-                  <div>報到與開場 / Check-in and Opening</div>
-                </div>
-                <div className="flex items-start">
-                  <div className="font-medium w-32">09:30 - 12:00</div>
-                  <div>上午場活動 / Morning Session</div>
-                </div>
-                <div className="flex items-start">
-                  <div className="font-medium w-32">12:00 - 13:30</div>
-                  <div>午餐休息 / Lunch Break</div>
-                </div>
-                <div className="flex items-start">
-                  <div className="font-medium w-32">13:30 - 16:30</div>
-                  <div>下午場活動 / Afternoon Session</div>
-                </div>
-                <div className="flex items-start">
-                  <div className="font-medium w-32">16:30 - 17:00</div>
-                  <div>總結與回饋 / Conclusion and Feedback</div>
-                </div>
-              </div>
+              {activity.features && activity.features.length > 0 && (
+                <>
+                  <h3 className="text-xl font-bold mb-4">活動特色 / Features</h3>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600 mb-6">
+                    {activity.features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
 
-              <h3 className="text-xl font-bold mb-4">活動地點 / Location</h3>
-              <p className="text-gray-600 mb-6">
-                台北市大安區復興南路一段000號 資訊大樓302教室<br />
-                Room 302, Information Building, No. 000, Sec. 1, Fuxing S. Rd., Da'an Dist., Taipei City
-              </p>
+              {activity.schedule && activity.schedule.length > 0 && (
+                <>
+                  <h3 className="text-xl font-bold mb-4">活動流程 / Schedule</h3>
+                  <div className="space-y-4 text-gray-600 mb-6">
+                    {activity.schedule.map((item, index) => (
+                      <div key={index} className="flex items-start">
+                        <div className="font-medium w-32">{item.time}</div>
+                        <div>{item.description}</div>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
 
-              <h3 className="text-xl font-bold mb-4">注意事項 / Notes</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                <li>請攜帶個人筆電 / Please bring your laptop</li>
-                <li>現場提供飲用水 / Drinking water provided</li>
-                <li>請準時參加 / Please arrive on time</li>
-                <li>如有特殊需求請提前告知 / Please inform us in advance for special needs</li>
-              </ul>
+              {activity.location && (
+                <>
+                  <h3 className="text-xl font-bold mb-4">活動地點 / Location</h3>
+                  <p className="text-gray-600 mb-6">{activity.location}</p>
+                </>
+              )}
+
+              {activity.notes && activity.notes.length > 0 && (
+                <>
+                  <h3 className="text-xl font-bold mb-4">注意事項 / Notes</h3>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600">
+                    {activity.notes.map((note, index) => (
+                      <li key={index}>{note}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </div>
           </div>
         </div>
