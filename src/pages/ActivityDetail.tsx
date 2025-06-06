@@ -7,7 +7,7 @@ const ActivityDetail: React.FC = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const activity = activities.find(a => a.id === id);
-  const currentDate = new Date('2025-06-05'); // 當前日期
+  const currentDate = new Date('2025-06-06'); // 當前日期
 
   if (!activity) {
     return (
@@ -143,6 +143,17 @@ const ActivityDetail: React.FC = () => {
                   <ul className="list-disc list-inside space-y-2 text-gray-600 mb-6">
                     {activity.features.map((feature, index) => (
                       <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
+
+              {activity.prizes && activity.prizes.length > 0 && (
+                <>
+                  <h3 className="text-xl font-bold mb-4">獎金或獎品 / Prizes</h3>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600 mb-6">
+                    {activity.prizes.map((prize, index) => (
+                      <li key={index}>{prize}</li>
                     ))}
                   </ul>
                 </>

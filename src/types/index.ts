@@ -11,6 +11,7 @@ export interface Activity {
   notes?: string[]; // 注意事項
   registrationLink?: string; // 報名連結
   websiteLink?: string; // 活動官網連結
+  prizes?: string[]; // 獎金或獎品
 }
 
 export interface Member {
