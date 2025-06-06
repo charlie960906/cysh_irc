@@ -24,7 +24,7 @@ export const activities: Activity[] = [
       '📧 競賽通知寄發 6 月 5 日（四)'
     ],
     registrationLink: 'https://forms.gle/Behp1XXJ9acfJnMWA',
-    websiteLink: '',
+    websiteLink: 'https://cc.cysh.cy.edu.tw/contest',
     prizes: ['🥇 第一名：$1500', '🥈 第二名：$1000', '🥉 第三名：$500' ,'🏅 佳作：$200 x 5 名' ,'前八名皆有獎金、所有參賽者皆可獲得學校認證之參與獎狀！']
   }
 ];
